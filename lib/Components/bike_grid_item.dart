@@ -25,7 +25,7 @@ class BikeGridItem extends StatelessWidget {
           backgroundColor: Colors.black87,
           title:  Text('${bike.nome}',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            textAlign: TextAlign.left,//
+            textAlign: TextAlign.left,
           ),
           subtitle: Text('Diária: R\$ ${bike.preco}',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
