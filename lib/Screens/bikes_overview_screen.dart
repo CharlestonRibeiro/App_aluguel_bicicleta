@@ -1,7 +1,10 @@
 import 'package:app_aluguel_bike_modulacao_mvp/Components/bike_grid_item.dart';
 import 'package:app_aluguel_bike_modulacao_mvp/Mocks/mocks_bike.dart';
 import 'package:app_aluguel_bike_modulacao_mvp/Models/bike.dart';
+import 'package:app_aluguel_bike_modulacao_mvp/Providers/cart_item.dart';
+import 'package:app_aluguel_bike_modulacao_mvp/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class BikeOverviewScreen extends StatefulWidget {
   @override
@@ -17,8 +20,20 @@ class _BikeOverviewScreenState extends State<BikeOverviewScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Aluguel de Bikes'),
-        centerTitle: true,
         backgroundColor: Colors.black87,
+        actions: [
+          IconButton(
+              icon: Icon(Icons.pedal_bike),
+              onPressed:(){
+                Navigator.of(context).pushNamed(AppRoutes.CART_DETAIL);
+              }),
+          Consumer<CartItem>(
+              builder: (context, cartItem, _) => Text(cartItem.total.toString()),
+          ),
+          SizedBox(
+            width: 22,
+          )
+        ],
       ),
       body: GridView.builder(
           itemCount: bikes.length,

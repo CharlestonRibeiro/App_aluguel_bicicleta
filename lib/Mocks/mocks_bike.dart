@@ -4,7 +4,7 @@ final MOCK_BIKES = [
   Bike(
       codigo: 3187,
       nome: 'BICICLETA GTSM1 ARO 29',
-      preco: 2500.00,
+      preco: 25.50,
       descricao: 'BICICLETA GTSM1 ARO 29 FREIO A DISCO 24 MARCHAS MX8 E RODAS DE MAGNÉSIO | GTS M1 ADVANCED MAGNÉSIO 2021',
       genero: 'Unissex',
       suspensao: 'Dianteria',
@@ -19,7 +19,7 @@ final MOCK_BIKES = [
   Bike(
       codigo: 1959,
       nome: 'BICICLETA GTS ARO 29',
-      preco: 2000.00,
+      preco: 20.00,
       descricao: 'BICICLETA GTS ARO 29 FREIO A DISCO 24 MARCHAS MX8 E RODAS DE MAGNÉSIO | GTS M1 ADVANCED MAGNÉSIO 2021',
       genero: 'Unissex',
       suspensao: 'Dianteria',
@@ -34,7 +34,7 @@ final MOCK_BIKES = [
   Bike(
       codigo: 3301,
       nome: 'BICICLETA 29 GTS LEXXUS 24',
-      preco: 25000.00,
+      preco: 28.00,
       descricao: 'BICICLETA GTS ARO 29 FREIO A DISCO CÂMBIO SHIMANO ALTUS 24 MARCHAS E AMORTECEDOR | GTS M1 LEXXUS SHIMANO ALTUS',
       genero: 'Unissex',
       suspensao: 'Dianteria',
@@ -49,7 +49,7 @@ final MOCK_BIKES = [
   Bike(
       codigo: 3301,
       nome: 'BICICLETA 29 GTS LEXXUS 24',
-      preco: 500.00,
+      preco: 50.00,
       descricao: 'BICICLETA GTS ARO 29 FREIO A DISCO CÂMBIO SHIMANO ALTUS 24 MARCHAS E AMORTECEDOR | GTS M1 LEXXUS SHIMANO ALTUS',
       genero: 'Unissex',
       suspensao: 'Dianteria',
