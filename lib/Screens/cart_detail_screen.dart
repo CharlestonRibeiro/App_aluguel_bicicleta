@@ -26,6 +26,7 @@ class CartDetailScreen extends StatelessWidget {
                       trailing: GestureDetector(
                         onTap: (){
                           cartProvider.removeBike(bikes[index]);
+                          cartProvider.mPrice(bikes[index]);
                         },
                         child: Icon(Icons.remove_shopping_cart_rounded),),
                       title: Text('${bikes[index].nome}'),
@@ -37,8 +38,8 @@ class CartDetailScreen extends StatelessWidget {
                     backgroundColor: MaterialStateProperty.all<Color>(Colors.black87)
                 ),
                 onPressed: () {},
-                icon:Icon(Icons.shopping_cart),
-                label: Text('Ir para o Pagamento')
+                icon: Icon(Icons.payment),
+                label: Text('O Aluguel de ${cartProvider.total} Bikes fica no valor de R\$ ${cartProvider.somaTotal.toStringAsFixed(2)}')
             ),
           ],
         ),

@@ -17,8 +17,21 @@ class BikeDetailsScreen extends StatelessWidget {
         backgroundColor: Colors.black87,
         title: Text(
           '${bike.nome}',
-          style: TextStyle(color: Colors.black87),
+          style: TextStyle(fontSize: 16),
         ),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.pedal_bike),
+              onPressed: () {
+                Navigator.of(context).pushNamed(AppRoutes.CART_DETAIL);
+              }),
+          Consumer<CartItem>(
+            builder: (context, cartItem, _) => Text(cartItem.total.toString()),
+          ),
+          SizedBox(
+            width: 18,
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -28,7 +41,12 @@ class BikeDetailsScreen extends StatelessWidget {
               image: CachedNetworkImageProvider(bike.imagemURL),
               fit: BoxFit.cover,
             ),
-            Text('${bike.nome}', style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 20),
+            Text(
+              '${bike.nome}',
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
             ),
             Padding(
               padding: const EdgeInsets.all(32.0),
@@ -41,15 +59,42 @@ class BikeDetailsScreen extends StatelessWidget {
                           style: TextStyle(color: Colors.black87)))),
             ),
             ElevatedButton.icon(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.black87)
-              ),
+                style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.black87)),
                 onPressed: () {
-                 cartProvider.addBike(bike);
-                 Navigator.of(context).pushNamed(AppRoutes.CART_DETAIL);
+
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text("${bike.nome}"),
+                          content: Text(cartProvider.addBike(bike)),
+                          actions: <Widget>[
+                            ElevatedButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Fechar'))
+                          ],
+                        );
+                      });
+
+
+                  //cartProvider.addBike(bike);
+                  cartProvider.sumPrice(bike);
                 },
-                icon:Icon(Icons.shopping_cart),
-                label: Text('Alugar Bike'))
+                icon: Icon(Icons.pedal_bike),
+                label: Text('Alugar Bike')),
+            ElevatedButton.icon(
+                style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.black87)),
+                onPressed: () {
+                  Navigator.of(context).pushNamed(AppRoutes.CART_DETAIL);
+                },
+                icon: Icon(Icons.shopping_cart),
+                label: Text('Ir para o carrinho'))
           ],
         ),
       ),
