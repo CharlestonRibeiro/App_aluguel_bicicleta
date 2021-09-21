@@ -10,10 +10,14 @@ class CartItem with ChangeNotifier{
   double somaTotal = 0;
 
 
-  addBike(Bike bike){
+  void addBike(Bike bike){
+    _bikes.add(bike);
+    notifyListeners();
+  }
+
+  ChecarAddBike(Bike bike){
     if (!_bikes.contains(bike)) {
-        _bikes.add(bike);
-        notifyListeners();
+        addBike(bike);
         resposta = "Otima escolha";
     }else{
       resposta = "Item já selecionado!";
@@ -24,6 +28,7 @@ class CartItem with ChangeNotifier{
   void removeBike(Bike bike){
     _bikes.remove(bike);
     notifyListeners();
+
   }
 
   void sumPrice(Bike bike){

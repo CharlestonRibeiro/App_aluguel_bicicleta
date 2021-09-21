@@ -69,7 +69,7 @@ class BikeDetailsScreen extends StatelessWidget {
                       builder: (BuildContext context) {
                         return AlertDialog(
                           title: Text("${bike.nome}"),
-                          content: Text(cartProvider.addBike(bike)),
+                          content: Text(cartProvider.ChecarAddBike(bike)),
                           actions: <Widget>[
                             ElevatedButton(
                                 onPressed: () {
