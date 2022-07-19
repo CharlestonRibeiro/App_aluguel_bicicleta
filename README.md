@@ -1,7 +1,6 @@
 # App aluguel bicicleta 
 
-Aplicação desenvolvida na disciplina de programação mobile, utilizado <br/> 
-o framework Flutter para desenvolver app de aluguel de bicicletas.
+Aplicação desenvolvida na disciplina de programação mobile, utilizado o framework Flutter para desenvolver um app de aluguel de bicicletas.
 
 - [x] Flutter.
 - [x] Provader.
