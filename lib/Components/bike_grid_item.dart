@@ -24,8 +24,10 @@ class BikeGridItem extends StatelessWidget {
         ),
         footer: GridTileBar(
           backgroundColor: Colors.black87,
-          title: Text(
-            '${bike.nome}',
+
+
+          title:  Text('${bike.nome}',//
+
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             textAlign: TextAlign.left,
           ),
