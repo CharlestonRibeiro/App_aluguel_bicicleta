@@ -1,16 +1,18 @@
-# app_aluguel_bike_modulacao_mvp
+# App aluguel bicicleta 
 
-A new Flutter application.
+Aplicação desenvolvida na disciplina de programação mobile, utilizado o framework Flutter para desenvolver um app de aluguel de bicicletas.
 
-## Getting Started
+- [x] Flutter.
+- [x] Provader.
+- [x] Consumo de imagem na web.
+- [x] Navegação entre páginas.
+- [x] Padrão MVC.
 
-This project is a starting point for a Flutter application.
+## Telas
 
-A few resources to get you started if this is your first Flutter project:
+<p align="center">
+<img src="https://github.com/CharlestonRibeiro/Portfolio_web_flutter/blob/master/assets/assets/imagens/bike/detail.png?raw=true" width="200" height="400" />|
+<img src="https://github.com/CharlestonRibeiro/Portfolio_web_flutter/blob/master/assets/assets/imagens/bike/home.png?raw=true" width="200" height="400" />|
+<img src="https://github.com/CharlestonRibeiro/Portfolio_web_flutter/blob/master/assets/assets/imagens/bike/cart.png?raw=true" width="200" height="400" />
+</p>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
